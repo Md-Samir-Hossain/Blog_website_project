@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+.container{
+    /* width: 55rem; */
+    min-width: 85vw;
+    padding: 1rem;
+    margin: auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.header_container{
+    margin-bottom: 2rem;
+}
+.header_title{
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+.header_desc{
+    max-width: 450px;
+    text-align: center;
+    margin: 0 auto;
+    color: rgb(97, 94, 94);
+    font-size: 0.8rem;
+}
+.main_container{
+    margin: auto;
+    padding: 1rem;
+    display: grid;
+    gap: 1.2rem;
+    /* grid-template-columns: repeat(4,1fr); */
+
+    /* bellow is the shortcut to creat a responsive designe while using grid without using media query. */
+    grid-template-columns: repeat(auto-fit, minmax(174px,194px));   
+    justify-content: center;
+}
+.card_container{
+    height: 16rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.card_image_container{
+    min-height: 50%;
+    position: relative;
+    overflow: hidden;
+}
+.card_image{
+    transition: all 0.3s linear 0s;
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.card_container:hover .card_image{
+    transform: scale(1.1);
+}
+
+.card_title_container{
+    padding: 0.7rem;
+}
+.card_title{
+    font-size: 0.7rem;
+    width:fit-content;
+    margin-bottom: 0.5rem;
+}
+.card_title:hover{
+    color: rgb(52, 52, 255);
+}
+.card_desc{
+    font-size: 0.6rem;
+    color: rgb(97, 94, 94);
+}
+
+.card_footer{
+    padding: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.author_container{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+.author_avatar_container img{
+    height: 1.5rem;
+    /* border: 1px solid rgb(205, 205, 205); */
+    border-radius: 50px;
+    background-color: rgb(240, 237, 237);
+}
+.author_info{
+    display: flex;
+    flex-direction: column;
+    font-size: 0.6rem;
+    color: rgb(97, 94, 94);
+}
+.author_name{
+    color: rgb(52, 52, 255);
+}
+.author_date{
+    color: rgb(97, 94, 94);
+}
+
+.card_tag_container{
+    display: flex;
+    align-items: center;
+    padding: 0.1rem 0.25rem;
+    border: 1px solid rgb(97, 94, 94);
+    color: rgb(97, 94, 94);
+    border-radius: 3px;
+    height: auto;
+    font-size: 0.6rem;
+}
